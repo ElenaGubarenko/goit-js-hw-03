@@ -8,17 +8,14 @@ const products = [
 ]
 
 const calculateTotalPrice = function (allProdcuts, productName) {
+  let a
   for (const object of allProdcuts) {
-    if (object.name !== productName) {
-      return "No"
+    if (object.name === productName) {
+      return object.price * object.quantity
     }
-
-    return object.price * object.quantity
   }
 }
 
 console.log(calculateTotalPrice(products, "Радар")) // 5200
 
 console.log(calculateTotalPrice(products, "Дроид")) // 2800
-
-console.log(calculateTotalPrice(products, "lalala")) /// no
