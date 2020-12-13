@@ -3,10 +3,10 @@
 const countTotalSalary = function (employees) {
   let all = 0
   const allSalary = Object.values(employees)
-  for (const employee in employees) {
-    all = all + employees[employee]
+  for (const salary in allSalary) {
+    all = all + allSalary[salary]
   }
-  console.log(all)
+  return all
 }
 
 console.log(countTotalSalary({}))
